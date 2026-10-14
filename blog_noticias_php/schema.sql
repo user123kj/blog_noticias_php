@@ -1,0 +1,34 @@
+CREATE DATABASE IF NOT EXISTS blog_noticias
+  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE blog_noticias;
+
+CREATE TABLE IF NOT EXISTS admins (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(60) NOT NULL UNIQUE,
+  password_hash VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS categories (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(80) NOT NULL UNIQUE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS news (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  category_id INT UNSIGNED NULL,
+  title VARCHAR(180) NOT NULL,
+  summary VARCHAR(300) NOT NULL,
+  content TEXT NOT NULL,
+  image_url VARCHAR(500) NULL,
+  image_alt VARCHAR(200) NULL,
+  status ENUM('draft','published') NOT NULL DEFAULT 'draft',
+  published_at DATETIME NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  CONSTRAINT fk_news_category FOREIGN KEY (category_id)
+    REFERENCES categories(id) ON DELETE SET NULL,
+  INDEX idx_news_status_date (status, published_at),
+  INDEX idx_news_category (category_id)
+);

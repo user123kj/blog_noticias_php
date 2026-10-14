@@ -1,0 +1,278 @@
+[
+ {
+  "id": "CP-01",
+  "ok": true,
+  "obtenido": "9 noticias en la página 1, ordenadas de la más reciente a la más antigua: sí",
+  "evidencia": "CP-01_inicio.png"
+ },
+ {
+  "id": "CP-02",
+  "ok": true,
+  "obtenido": "Búsqueda «robótica»: 1 resultado(s): ['Laboratorio de robótica abre sus puertas']",
+  "evidencia": "CP-02_busqueda.png"
+ },
+ {
+  "id": "CP-03",
+  "ok": true,
+  "obtenido": "«%» → HTTP 200, 1 resultados (solo títulos con % literal); «50%_» → ['Olimpiada de matemáticas 50%_récord']",
+  "evidencia": "CP-03_comodines.png"
+ },
+ {
+  "id": "CP-04",
+  "ok": true,
+  "obtenido": "Categorías mostradas tras filtrar: ['Educación']",
+  "evidencia": "CP-04_filtro.png"
+ },
+ {
+  "id": "CP-05",
+  "ok": true,
+  "obtenido": "Página 2: 9; página 3: 7 (25 en total); marcada: «Página 3»; p=99 se ajusta a la última (7)",
+  "evidencia": "CP-05_paginacion.png"
+ },
+ {
+  "id": "CP-06",
+  "ok": true,
+  "obtenido": "Detalle: título «Nueva red de fibra óptica llega a Huancayo», imagen con alt «Logotipo verde del blog con la letra N», contenido con 2 párrafos",
+  "evidencia": "CP-06_detalle.png"
+ },
+ {
+  "id": "CP-07",
+  "ok": true,
+  "obtenido": "id=9999 → HTTP 404 «Noticia no encontrada»; borrador (id=110) visto sin sesión → HTTP 404, sin filtrar contenido; id=abc → HTTP 404",
+  "evidencia": "CP-07_404.png"
+ },
+ {
+  "id": "CP-08",
+  "ok": true,
+  "obtenido": "Clave incorrecta y usuario inexistente muestran el mismo mensaje genérico: «Usuario o contraseña incorrectos.»; permanece en login",
+  "evidencia": "CP-08_login_error.png"
+ },
+ {
+  "id": "CP-09",
+  "ok": true,
+  "obtenido": "Login válido redirige a admin.php con el panel",
+  "evidencia": "CP-09_panel.png"
+ },
+ {
+  "id": "CP-10",
+  "ok": true,
+  "obtenido": "Sin sesión: admin.php→login.php, noticia_form.php→login.php, categorias.php→login.php, cuenta.php→login.php",
+  "evidencia": null
+ },
+ {
+  "id": "CP-11",
+  "ok": true,
+  "obtenido": "Mensaje «Noticia creada correctamente.»; la noticia aparece en el panel como Borrador",
+  "evidencia": "CP-11_creada.png"
+ },
+ {
+  "id": "CP-12",
+  "ok": true,
+  "obtenido": "Aviso general «Revisa los campos marcados (3).»; 3 campos con aria-invalid y mensaje asociado (aria-describedby)",
+  "evidencia": "CP-12_errores.png"
+ },
+ {
+  "id": "CP-13",
+  "ok": true,
+  "obtenido": "Rechazada: «Describe la imagen en máximo 200 caracteres para quienes usan lector de pantalla.»",
+  "evidencia": "CP-13_sin_alt.png"
+ },
+ {
+  "id": "CP-14",
+  "ok": true,
+  "obtenido": "javascript: y ftp: rechazadas con mensaje en el campo URL",
+  "evidencia": null
+ },
+ {
+  "id": "CP-15",
+  "ok": true,
+  "obtenido": "El título editado persiste tras recargar el panel",
+  "evidencia": "CP-15_editada.png"
+ },
+ {
+  "id": "CP-16",
+  "ok": true,
+  "obtenido": "Estado «Publicada»; aparece primera en el inicio con fecha 13/10/2026 (hoy 13/10/2026)",
+  "evidencia": "CP-16_publicada.png"
+ },
+ {
+  "id": "CP-17",
+  "ok": true,
+  "obtenido": "Confirmación aceptada → «Noticia eliminada.»; ya no está en el panel y su URL da HTTP 404",
+  "evidencia": "CP-17_eliminada.png"
+ },
+ {
+  "id": "CP-18",
+  "ok": true,
+  "obtenido": "Categoría repetida: «La categoría ya existe o no se pudo guardar.»",
+  "evidencia": "CP-18_duplicada.png"
+ },
+ {
+  "id": "CP-19",
+  "ok": true,
+  "obtenido": "Categoría eliminada; la noticia sigue publicada y se muestra como «General»",
+  "evidencia": "CP-19_general.png"
+ },
+ {
+  "id": "CP-20",
+  "ok": true,
+  "obtenido": "POST sin token → 403; con token falso → 403; login sin token → 403",
+  "evidencia": null
+ },
+ {
+  "id": "CP-21",
+  "ok": true,
+  "obtenido": "El título se muestra como texto «<script>alert(1)</script><img src=x oner…», 0 alertas ejecutadas; inyección SQL «' OR 1=1 -- » → 0 resultados, HTTP 200",
+  "evidencia": "CP-21_xss.png"
+ },
+ {
+  "id": "CP-23",
+  "ok": true,
+  "obtenido": "Orden de tabulación: Saltar al contenido → N → Inicio → Noticias → Administración → Accesibilidad y lectura → Explorar noticias → INPUT…; 25/25 elementos con foco visible; enlace «Saltar al contenido» funciona; búsqueda operable con Enter",
+  "evidencia": "CP-23_foco_teclado.png"
+ },
+ {
+  "id": "CP-24",
+  "ok": true,
+  "obtenido": "inicio: 1 h1, 0 saltos de nivel, 0 controles sin nombre, lang=es, 4 regiones; detalle: 1 h1, 0 saltos de nivel, 0 controles sin nombre, lang=es, 4 regiones; login: 1 h1, 0 saltos de nivel, 0 controles sin nombre, lang=es, 4 regiones; formulario: 0 campos sin etiqueta",
+  "evidencia": null
+ },
+ {
+  "id": "CP-25",
+  "ok": true,
+  "obtenido": "0 textos bajo 4,5:1 (mínimo medido 5.34:1); foco azul oscuro 10.28:1; con deuteranopia, protanopia y acromatopsia los estados se distinguen por texto («Publicada»)",
+  "evidencia": "CP-25_deuteranopia.png"
+ },
+ {
+  "id": "CP-26",
+  "ok": true,
+  "obtenido": "Desbordamiento horizontal: 320 px → 0 px; 640 px (equivale a zoom 200 % en 1280 px) → 0 px",
+  "evidencia": "CP-26_320px.png"
+ },
+ {
+  "id": "CP-27",
+  "ok": true,
+  "obtenido": "Tipografía única ['system-ui'], radio de botones ['11px'], color de marca ['#176b62'] en todas las páginas",
+  "evidencia": null
+ },
+ {
+  "id": "CP-28",
+  "ok": true,
+  "obtenido": "Móvil (Moto G4 emulado): FCP 92 ms, LCP 92 ms, CLS 0.000, TTFB 9 ms, 174 nodos DOM",
+  "evidencia": null
+ },
+ {
+  "id": "CP-29",
+  "ok": true,
+  "obtenido": "Red 3G lenta (400 kbps, 400 ms RTT) + CPU 4× más lenta: FCP 1440 ms, LCP 1440 ms, carga completa 1413 ms, CLS 0.000",
+  "evidencia": null
+ },
+ {
+  "id": "CP-30",
+  "ok": true,
+  "obtenido": "Sin JavaScript: listado (9), búsqueda (1 resultado) y detalle «Nuevo parque ecológico en la ciudad» funcionan",
+  "evidencia": "CP-30_sin_js.png"
+ },
+ {
+  "id": "CP-31",
+  "ok": true,
+  "obtenido": "Inicio: 4 peticiones y 22.3 KB transferidos (comprimidos); sin fuentes ni librerías externas",
+  "evidencia": null
+ },
+ {
+  "id": "CP-33",
+  "ok": true,
+  "obtenido": "HTML comprimido con gzip: 9327 → 2419 bytes (75 % menos); X-Content-Type-Options, X-Frame-Options y Referrer-Policy presentes; X-Powered-By oculto",
+  "evidencia": null
+ },
+ {
+  "id": "CP-35",
+  "ok": true,
+  "obtenido": "Texto 16 px → 20 px (125 %), se mantiene tras recargar (20 px), sin desbordamiento",
+  "evidencia": "CP-35_texto_grande.png"
+ },
+ {
+  "id": "CP-36",
+  "ok": true,
+  "obtenido": "Alto contraste: mínimo 7.69:1; alto contraste + oscuro: 15.71:1; solo modo oscuro: 8.83:1; preferencia persiste al navegar (tema=dark); botón con aria-pressed",
+  "evidencia": "CP-36_alto_contraste.png"
+ },
+ {
+  "id": "CP-37",
+  "ok": true,
+  "obtenido": "0 audios/videos (todo es texto); «Escuchar noticia» lee 5 frases (aria-pressed=true, «Detener lectura»), «Detener» cancela (aria-pressed=false) y al terminar se restablece solo (aria-pressed=false); sin soporte de voz el botón se oculta",
+  "evidencia": "CP-37_escuchar.png"
+ },
+ {
+  "id": "CP-38",
+  "ok": true,
+  "obtenido": "Pixel 5 (táctil): 0 objetivos menores a 44×44 px ; navegación fija en el borde inferior (alto 61 px)",
+  "evidencia": "CP-38_movil_inicio.png"
+ },
+ {
+  "id": "CP-39",
+  "ok": true,
+  "obtenido": "Interlineado 1.9 (≥ 1,5); ~77 caracteres por línea; mensajes de error cortos y en lenguaje claro: «El título es obligatorio (máximo 180 caracteres).»",
+  "evidencia": null
+ },
+ {
+  "id": "CP-40",
+  "ok": true,
+  "obtenido": "360×640: desbordamiento 0 px, letra de campos 16 px; 390×844: desbordamiento 0 px, letra de campos 16 px (≥ 16 px evita el zoom automático de iOS)",
+  "evidencia": "CP-40_360x640.png"
+ },
+ {
+  "id": "CP-41",
+  "ok": true,
+  "obtenido": "Tabla en móvil: tabindex=0, role=region, aria-label «Tabla desplazable», recibe foco y se desplaza con flechas (sí)",
+  "evidencia": "CP-41_tabla_movil.png"
+ },
+ {
+  "id": "CP-42",
+  "ok": true,
+  "obtenido": "Manifest válido (nombre «Noticias al Día», display standalone, icono SVG); service worker activo en la 2.ª visita; recursos en caché: ['style.css', 'app.js', 'style.css', 'app.js', 'icon.svg']",
+  "evidencia": null
+ },
+ {
+  "id": "CP-43",
+  "ok": true,
+  "obtenido": "Con «ahorro de datos» activo se agrega la clase save-data y la ilustración decorativa se oculta (display: none); también se oculta en celulares",
+  "evidencia": "CP-43_ahorro_datos.png"
+ },
+ {
+  "id": "CP-44",
+  "ok": true,
+  "obtenido": "Escritorio sin Web Share: botón oculto; celular con Web Share: botón visible y envía título «Bienvenidos al blog de noticia…» y URL de la noticia",
+  "evidencia": null
+ },
+ {
+  "id": "CP-45",
+  "ok": true,
+  "obtenido": "Vertical 393×851: 1 columna; horizontal 851×393: 3 columnas; sin desbordamiento",
+  "evidencia": "CP-45_horizontal.png"
+ },
+ {
+  "id": "CP-46",
+  "ok": true,
+  "obtenido": "Con «reducir movimiento»: transición de tarjetas 0s, desplazamiento auto (sin animación)",
+  "evidencia": null
+ },
+ {
+  "id": "CP-47",
+  "ok": true,
+  "obtenido": "Clave corta rechazada («La nueva contraseña debe tener al menos 8 caracteres.»); clave válida → «Contraseña actualizada correctamente.»; la nueva permite entrar y la anterior ya no",
+  "evidencia": null
+ },
+ {
+  "id": "CP-48",
+  "ok": true,
+  "obtenido": "Intentos 1–5: «Usuario o contraseña incorrectos.»; intento 6: «Demasiados intentos fallidos. Espera 59 segun…»; incluso la clave correcta espera el fin del bloqueo",
+  "evidencia": "CP-48_bloqueo.png"
+ },
+ {
+  "id": "CP-49",
+  "ok": true,
+  "obtenido": "GET a logout.php no cierra la sesión (sigue en el panel); el botón «Cerrar sesión» (POST + token) la cierra y luego admin.php → login.php",
+  "evidencia": null
+ }
+]
